@@ -1,6 +1,9 @@
-import { legacy_createStore as createStore } from 'redux';
+import { compose, legacy_createStore as createStore } from 'redux';
 import rootReducer from './rootReducer';
 //importing a default export
 
-const store = createStore(rootReducer)
+import { thunk } from 'redux-thunk';
+
+const store = createStore(rootReducer,
+    composewith
 export default store

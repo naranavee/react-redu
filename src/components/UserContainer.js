@@ -1,7 +1,12 @@
-import React from 'react'
+import { useEffect } from "react";
+import {fetchUsers} from "../redux";
+import { connect } from "react-redux";
 
-export default function UserContainer() {
-  return (
-    <div>UserContainer</div>
-  )
+
+function UserContainer(userData, fetchUsers){
+  function UserContainer({userData, fetchUsers}){
+    useEffect(() => {
+      fetchUsers();
+    }, [])
+  }
 }
